@@ -129,6 +129,11 @@ body {
   transform: scale(0.98);
 }
 
+#nextPrevBtnGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Dive Layout */
 
 .dive-container {

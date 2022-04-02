@@ -19,10 +19,16 @@ function Dives() {
     getDives()
   }, []) // empty dependency array because we want this to only once, when it loads
 
-  const onGetDiveBtnClicked = (e) => {
+  const onGetNextDiveBtnClicked = (e) => {
     e.preventDefault();  // so it does not submit to a page
 
-    diveIndex < (diveData.length -1) ? setDiveIndex(diveIndex+1): setDiveIndex(0);
+    diveIndex < (diveData.length -1) ? setDiveIndex(diveIndex+1): setDiveIndex(diveData.length-1)
+  }
+
+  const onGetPrevDiveBtnClicked = (e) => {
+    e.preventDefault();  // so it does not submit to a page
+
+    diveIndex > 0 ? setDiveIndex(diveIndex-1): setDiveIndex(0)
   }
 
   if (loading) {
@@ -30,7 +36,10 @@ function Dives() {
   } else if (diveData.length > 0) {
     return (
       <div>
-        <button id="getDiveBtn" className="btn" onClick={onGetDiveBtnClicked}>Get Dive</button>
+        <div id='nextPrevBtnGroup'>
+          <button id="getPrevDiveBtn" className="btn" onClick={onGetPrevDiveBtnClicked}>Prev Dive</button>
+          <button id="getNextDiveBtn" className="btn" onClick={onGetNextDiveBtnClicked}>Next Dive</button>
+        </div>
         <Dive diveInfo={diveData[diveIndex]} />
       </div>
     )
