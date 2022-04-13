@@ -198,3 +198,13 @@ body {
   background-color: var(--footer-color);
   color: #fff;
 }
+
+@media(max-width: 768px) {
+  .dive-container {
+    display: block;
+  }
+
+  .selected_dive {
+    flex-direction: column;
+  }
+}

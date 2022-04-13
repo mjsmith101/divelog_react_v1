@@ -1,6 +1,6 @@
 # Dive Log React App - Version 1
 
-First attempt to create a React app that will extract and display all the entries in my scuba diving log. In this version a subset of the dives are used. The app uses a mock REST api with json-server.
+First attempt to create a React app that will extract and display all the entries in my scuba diving log. In this version a subset of the dives are used. The app uses a mock REST api with json-server. Styling is vanilla CSS.
 
 ---
 
