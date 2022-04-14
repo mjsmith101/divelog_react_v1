@@ -24,7 +24,7 @@ function Dive({ diveInfo }) {
       <div className="card">
         <p id="airTemp">{`Air Temperature: ${diveInfo.airTemp} Deg-f`}</p><br />
         <p id="surfaceTemp">{`Surface Temperature: ${diveInfo.surfaceTemp} Deg-f`}</p><br />
-        <p id="bottomTemp">{`Air Temperature: ${diveInfo.bottomTemp} Deg-f`}</p>
+        <p id="bottomTemp">{`Bottom Temperature: ${diveInfo.bottomTemp} Deg-f`}</p>
       </div>
       <div className="card">
         <p id="depth">{`Depth: ${diveInfo.depth} ft`}</p>
